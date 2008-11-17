@@ -160,7 +160,7 @@ There is some Unicode support (for strings, not identifiers), but it has been on
 
 =Relationship to js2-mode=
 
-Ejacs was a precursor to js2-mode.  However, except for a handful of shared functions, Ejacs and js2-mode completely different implementations.
+Ejacs was a precursor to [http://code.google.com/p/js2-mode].  However, except for a handful of shared functions, Ejacs and js2-mode are completely different implementations.
 
 js2-mode is a port of Mozilla Rhino's scanner and parser, plus a JavaScript editing mode built around the port.  js2-mode's parser is much faster and more correct/complete than the parser in this package.
 
