@@ -139,7 +139,7 @@ The regexp engine (jsre.el) is a port of Mozilla Rhino's regexp engine.  However
 
 The jsre.el package is designed to function as an independent package, and could potentially be used to introduce JavaScript regular expression syntax into Emacs Lisp code and applications.
 
-You can see the translated elisp version of a regexp by accessing the non-standard '__elisp__' property of a regexp.  For instance:
+You can see the translated elisp version of a regexp by accessing the non-standard `__elisp__` property of a regexp.  For instance:
 
 {{{
 js> /(\w+)\.[A-Z]{3,4}\S(\d+)/.__elisp__
