@@ -25,6 +25,30 @@ Ejacs does not yet provide any integration with Emacs, so in its current form it
 
 It also does not provide a browser environment, so there is almost nothing useful you can do with it other than play around with the JavaScript language and the Ecma-262 objects and functions.
 
+===Update 11/27/2008===
+
+I added a built-in `Buffer` constructor function, as a proof-of-concept host object.  Creating a `Buffer` object will get or create the buffer with that name in Emacs.
+
+This console command will create a buffer named "foo" and show it in a new window:
+
+{{{
+js> var b = new Buffer("foo")
+js> b.popTo()
+}}}
+
+This will kill the existing buffer "js-console.el" (if you have it open).
+
+{{{
+js> new Buffer("js-console.el").kill()
+true
+}}}
+
+There are two "static methods" (properties of the `Buffer` constructor function):  `Buffer.get(name)` and `Buffer.listBuffers()`.
+
+`Buffer` comes with getter/setter properties for `name` and `isReadOnly`, and methods for `exists`, `kill` and `popTo`.
+
+Again, it's just a proof of concept.  Over time I'll try to flesh out the native Emacs integration support into something usable. 
+
 ==Performance==
 
 The parser and evaluator are direct ports of Brendan Eich's Narcissus (JavaScript in JavaScript):
